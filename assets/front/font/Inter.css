@@ -1,0 +1,37 @@
+@font-face {
+    font-family: 'Inter_Black';
+    src: url('Inter_Black/Inter_Black.eot'); /* IE9 Compat Modes */
+    src: url('Inter_Black/Inter_Black.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('Inter_Black/Inter_Black.woff2') format('woff2'), /* Super Modern Browsers */
+         url('Inter_Black/Inter_Black.woff') format('woff'), /* Pretty Modern Browsers */
+         url('Inter_Black/Inter_Black.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+@font-face {
+    font-family: 'Inter_Light';
+    src: url('Inter_Light/Inter_Light.eot'); /* IE9 Compat Modes */
+    src: url('Inter_Light/Inter_Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('Inter_Light/Inter_Light.woff2') format('woff2'), /* Super Modern Browsers */
+         url('Inter_Light/Inter_Light.woff') format('woff'), /* Pretty Modern Browsers */
+         url('Inter_Light/Inter_Light.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+@font-face {
+    font-family: 'Inter_Medium';
+    src: url('Inter_Medium/Inter_Medium.eot'); /* IE9 Compat Modes */
+    src: url('Inter_Medium/Inter_Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('Inter_Medium/Inter_Medium.woff2') format('woff2'), /* Super Modern Browsers */
+         url('Inter_Medium/Inter_Medium.woff') format('woff'), /* Pretty Modern Browsers */
+         url('Inter_Medium/Inter_Medium.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+@font-face {
+    font-family: 'Inter_SemiBold';
+    src: url('Inter_SemiBold/Inter_SemiBold.eot'); /* IE9 Compat Modes */
+    src: url('Inter_SemiBold/Inter_SemiBold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('Inter_SemiBold/Inter_SemiBold.woff2') format('woff2'), /* Super Modern Browsers */
+         url('Inter_SemiBold/Inter_SemiBold.woff') format('woff'), /* Pretty Modern Browsers */
+         url('Inter_SemiBold/Inter_SemiBold.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+.Inter_Black{font-family: 'Inter_Black';}
+.Inter_Light{font-family: 'Inter_Light';}
+.Inter_Medium{font-family: 'Inter_Medium';}
+.Inter_SemiBold{font-family: 'Inter_SemiBold';}
+:root{--Inter_Black:'Inter_Black'; --Inter_Light:'Inter_Light'; --Inter_Medium:'Inter_Medium'; --Inter_SemiBold:'Inter_SemiBold';}

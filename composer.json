@@ -1,0 +1,13 @@
+{
+    "name": "amir-r6f/med-tkt",
+    "authors": [
+        {
+            "name": "amir-R6F",
+            "email": "md.r6f.mrg@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "classmap": ["inc/"]
+    }
+}
