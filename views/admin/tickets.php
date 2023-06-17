@@ -9,7 +9,6 @@
             <td>Department</td>
             <td>Related Service</td>
             <td>Priority</td>
-<!--            <td>Description</td>-->
             <td>Ticket Number</td>
             <td>Created Date</td>
             <td>State</td>
@@ -24,7 +23,6 @@
                 <td><?= $ticket->department ?></td>
                 <td><?= $ticket->related_service ?></td>
                 <td><?= $ticket->priority ?></td>
-<!--                <td>--><?//= $ticket->description ?><!--</td>-->
                 <td><?= $ticket->tkt_number ?></td>
                 <td><?= $ticket->CREATED_AT ?></td>
                 <td>

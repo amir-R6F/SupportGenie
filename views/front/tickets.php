@@ -24,7 +24,8 @@
                             <li class="col-md-3 col"><?= $ticket->issue ?></li>
                             <li class="col-2 d-none d-md-block"><?= $ticket->state ?></li>
                             <li class="col-1 d-none d-md-block"><?= $ticket->department ?></li>
-                            <li class="col-3 d-none d-md-block"><?= $ticket->tkt_number  ?></li>
+                            <li class="col-3 d-none d-md-block"><button class="btn btn-primary rounded-2 px-2 py-0 med-response"
+                                                                        data-info='<?= json_encode(["id" => $ticket->ID, "current" => get_current_user_id(), "tktNum" => $ticket->tkt_number]) ?>'>&#9993;</button></li>
                             <li class="col-3 d-none d-md-block"><?= $ticket->CREATED_AT ?></li>
                             <li class="col-2 d-block d-md-none">
                                 <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -46,6 +47,29 @@
             </ul>
 
 
+        </div>
+    </div>
+</div>
+
+<div class="modal fade " id="AdminChatRoom" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Ticket: <span id="ChatRoom-tkt-num"></span></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex">
+                <div class="d-flex flex-column gap-2" id="ChatRoom-messages">
+
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <form class="input-group mx-5" id="med-send-message-form">
+                    <input type="text" id="med-message-form" class="form-control">
+                    <button data-info='ww' type="submit" class="btn btn-primary">send</button>
+                </form>
+            </div>
         </div>
     </div>
 </div>
