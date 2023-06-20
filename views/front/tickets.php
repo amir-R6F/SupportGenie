@@ -1,18 +1,14 @@
-<?php
-    $tkt = new MED_Tickets();
-    $tickets = $tkt->list_tickets(get_current_user_id());
-?>
 
 <div class="container-lg">
 
     <div class="Dashboard-page">
         <div class="Tickets">
             <ul class="Ticket-header">
-                <li class="col-10 col-md-3">Issue</li>
-                <li class="col-2 d-none d-md-block">State</li>
-                <li class="col-1 d-none d-md-block">Department</li>
-                <li class="col-3 d-none d-md-block">Ticket Number</li>
-                <li class="col-3 d-none d-md-block">Postage Date</li>
+                <li class="col-10 col-md-3"><?= $lang_state ? $settings["Issue"] : "Issue" ?></li>
+                <li class="col-2 d-none d-md-block"><?= $lang_state ? $settings["State"] : "State" ?></li>
+                <li class="col-1 d-none d-md-block"><?= $lang_state ? $settings["Department"] : "Department" ?></li>
+                <li class="col-3 d-none d-md-block"><?= $lang_state ? $settings["Ticket-Number"] : "Ticket Number" ?></li>
+                <li class="col-3 d-none d-md-block"><?= $lang_state ? $settings["Postage-Date"] : "Postage Date" ?></li>
             </ul>
             <ul class="Ticket-body">
                 <?php foreach ($tickets as $ticket): ?>
@@ -35,7 +31,7 @@
 
                         </ul>
                         <div class="description collapse" id="t<?= $ticket->ID ?>">
-                            <span>Description :</span>
+                            <span><?= $lang_state ? $settings["Description"] : "Description" ?> :</span>
                             <p><?= $ticket->description ?></p>
                         </div>
 
@@ -55,19 +51,18 @@
     <div class="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Ticket: <span id="ChatRoom-tkt-num"></span></h5>
+                <h5 class="modal-title"><?= $lang_state ? $settings["Ticket-Number"] : "Ticket Number" ?>: <span id="ChatRoom-tkt-num"></span></h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body d-flex">
                 <div class="d-flex flex-column gap-2" id="ChatRoom-messages">
-
                 </div>
 
             </div>
             <div class="modal-footer">
                 <form class="input-group mx-5" id="med-send-message-form">
                     <input type="text" id="med-message-form" class="form-control">
-                    <button data-info='ww' type="submit" class="btn btn-primary">send</button>
+                    <button data-info='' type="submit" class="btn btn-primary"><?= $lang_state ? $settings["Send-btn"] : "Send" ?></button>
                 </form>
             </div>
         </div>

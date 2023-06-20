@@ -5,14 +5,14 @@
     <table class="widefat"  >
         <thead>
         <tr>
-            <td>Issue</td>
-            <td>Department</td>
-            <td>Related Service</td>
-            <td>Priority</td>
-            <td>Ticket Number</td>
-            <td>Created Date</td>
-            <td>State</td>
-            <td>اکشن</td>
+            <td><?= $lang_state ? $settings["Issue"] : "Issue" ?></td>
+            <td><?= $lang_state ? $settings["Department"] : "Department" ?></td>
+            <td><?= $lang_state ? $settings["Related-Service"] : "Related Service" ?></td>
+            <td><?= $lang_state ? $settings["Priority"] : "Priority" ?></td>
+            <td><?= $lang_state ? $settings["Ticket-Number"] : "Ticket Number" ?></td>
+            <td><?= $lang_state ? $settings["Postage-Date"] : "Postage Date" ?></td>
+            <td><?= $lang_state ? $settings["State"] : "State" ?></td>
+            <td><?= $lang_state ? $settings["Actions"] : "Actions" ?></td>
         </tr>
         </thead>
         <tbody>
@@ -28,10 +28,10 @@
                 <td>
                     <?php if ($ticket->state): ?>
                         <span class="dashicons dashicons-update-alt cursor-pointer " data-info='<?= json_encode(["id" => $ticket->ID, "state" => $ticket->state]) ?>'></span>
-                        <span class="badge bg-success">خوانده شده</span>
+                        <span class="badge bg-success"><?= $lang_state ? $settings["Read"] : "Read" ?></span>
                     <?php else: ?>
                         <span class="dashicons dashicons-update-alt cursor-pointer " data-info='<?= json_encode(["id" => $ticket->ID, "state" => $ticket->state]) ?>'></span>
-                        <span class="badge bg-warning">خوانده نشده</span>
+                        <span class="badge bg-warning"><?= $lang_state ? $settings["UnRead"] : "Unread" ?></span>
                     <?php endif; ?>
 
                 </td>
@@ -67,7 +67,7 @@
             <div class="modal-footer">
                 <form class="input-group mx-5" id="med-send-message-form">
                     <input type="text" id="med-message-form" class="form-control">
-                    <button data-info='ww' type="submit" class="btn btn-primary">send</button>
+                    <button data-info='' type="submit" class="btn btn-primary"><?= $lang_state ? $settings["Send-btn"] : "Send" ?></button>
                 </form>
             </div>
         </div>

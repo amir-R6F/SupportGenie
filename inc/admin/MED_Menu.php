@@ -50,16 +50,25 @@ class MED_Menu extends MED_Base_Menu{
     {
         $tickets = new MED_ADMIN_Tickets();
         $tickets = $tickets->list_tickets();
+        $settings = MED_settings('med-custom-language');
+        $lang_state = MED_settings('med-custom-language-state');
         include MED_VIEWS . 'admin/tickets.php';
     }
 
     public function user_tickets()
     {
+        $tkt = new MED_Tickets();
+        $tickets = $tkt->list_tickets(get_current_user_id());
+        $settings = MED_settings('med-custom-language');
+        $lang_state = MED_settings('med-custom-language-state');
+        MED_settings('med-custom-language-state');
         include MED_VIEWS . 'front/tickets.php';
     }
 
     public function add_ticket()
     {
+        $settings = MED_settings('med-custom-language');
+        $lang_state = MED_settings('med-custom-language-state');
         include MED_VIEWS . 'front/new-ticket.php';
     }
 }
